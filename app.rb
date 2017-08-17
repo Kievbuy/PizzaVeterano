@@ -1,7 +1,8 @@
 require 'rubygems'
 require 'sinatra'
+require 'sqlite3'
 
 
 get '/' do
-  erb 'Hello, World!'
+  erb :index
 end
