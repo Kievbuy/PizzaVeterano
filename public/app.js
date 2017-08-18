@@ -8,3 +8,8 @@ function something()
 
     alert(x);
 }
+
+function addtocart(id)
+{
+    alert('You added pizza with id: ' + id);
+}
