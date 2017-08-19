@@ -8,6 +8,15 @@ function something()
 
     alert(x);
 }
+function update_orders_input(){
+    var orders = get_orders();
+    $('#orders_input').val(orders);
+}
+
+function update_orders_button(){
+    var text = 'Cart (' + totalcart() + ')';
+    $("#orders_button").val(text);
+}
 
 function add_to_cart(id)
 {
@@ -19,6 +28,7 @@ function add_to_cart(id)
     alert(x);
 
     update_orders_input();
+    update_orders_button();
 }
 
 function totalcart() {
@@ -44,9 +54,4 @@ function get_orders() {
         }
     }
     return orders;
-}
-
-function update_orders_input(){
-    var orders = get_orders();
-    $('#orders_input').val(orders)
 }
