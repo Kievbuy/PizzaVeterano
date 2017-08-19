@@ -22,8 +22,8 @@ function totalcart() {
     var total = 0;
     for(var i in localStorage)
     {
-        var loc = localStorage[i]
-        total = total + loc * 1
+        var loc = localStorage[i];
+        total = total + loc * 1;
     }
     alert(total);
 }
