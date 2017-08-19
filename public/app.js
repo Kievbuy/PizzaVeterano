@@ -27,3 +27,18 @@ function totalcart() {
     }
     alert(total);
 }
+
+function get_orders() {
+    var orders = '';
+    for(var i in localStorage)
+    {
+        var key = i;
+        var value = localStorage[i];
+
+        if(key.indexOf('product_') == 0);
+        {
+            orders = orders + key + '=' + value + ',';
+        }
+    }
+    return orders;
+}
