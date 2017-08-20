@@ -27,3 +27,21 @@
     <th><%= @total_qty %></th>
   </tr>
 </table>
+
+<br>
+
+<form action="/order" method="POST" role="form">
+  <div class="form-group">
+    <label>Your Name</label>
+    <input name="order[name]" type="text" class="form-control" placeholder="Enter your name" value=""></div>
+
+  <div class="form-group">
+    <label>Phone</label>
+    <input name="order[phone]" type="text" class="form-control" placeholder="Enter your phone" value=""></div>
+
+  <div class="form-group">
+  <label>Addrss</label>
+  <input name="order[address]" type="text" class="form-control" placeholder="Delivery address" value=""></div>
+
+  <input type="submit" value="Confirm Your Order" class="btn btn-success">
+</form>
