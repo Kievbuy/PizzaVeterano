@@ -2,21 +2,28 @@
 <br>
 <p>Your order:</p>
 
-<p><%= @items.inspect %></p>
-
 <table class="table table-bordered table-striped">
     <tr>
       <th>Product</th>
+      <th>Size</th>
+      <th>Price</th>
       <th>Number of items</th>
     </tr>
+  <% @total_price = 0 %>
+  <% @total_qty = 0 %>
   <% @items.each do |x| %>
      <tr>
        <th><%= x[0].title %> Pizza</th>
+       <td><%= x[0].size %></td>
+       <td><%= x[0].price %></td>
        <td><%= x[1] %></td>
      </tr>
+     <% @total_price += (x[0].price.to_f * x[1].to_f) %>
+      <% @total_qty += x[1].to_i %>
   <% end %>
   <tr>
     <td colspan="2"><b>Total: <%= @items.size %></b></td>
-    <!--<td></td>-->
+    <th><%= @total_price %> UAH</th>
+    <th><%= @total_qty %></th>
   </tr>
 </table>
