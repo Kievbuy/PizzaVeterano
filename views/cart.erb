@@ -2,19 +2,21 @@
 <br>
 <p>Your order:</p>
 
+<p><%= @items.inspect %></p>
+
 <table class="table table-bordered table-striped">
     <tr>
       <th>Product</th>
       <th>Number of items</th>
     </tr>
-  <% @orders.each do |x| %>
+  <% @items.each do |x| %>
      <tr>
-       <th>id<%= x[0] %></th>
+       <th><%= x[0].title %> Pizza</th>
        <td><%= x[1] %></td>
      </tr>
   <% end %>
   <tr>
-    <td colspan="2"><b>Total: <%= @orders.size %></b></td>
+    <td colspan="2"><b>Total: <%= @items.size %></b></td>
     <!--<td></td>-->
   </tr>
 </table>
