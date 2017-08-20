@@ -59,3 +59,8 @@ function get_orders() {
     }
     return orders;
 }
+
+function clear_local_storage(){
+    window.localStorage.clear();
+    update_orders_button();
+}

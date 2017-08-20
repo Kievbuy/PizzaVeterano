@@ -31,10 +31,13 @@
 			  <div class="navbar-collapse collapse">
 			    <ul class="nav navbar-nav">
 			      <li><a href="/about">About us</a></li>
+						<li><a href="/all_orders">All orders</a></li>
 			    </ul>
 
 					<nav class="navbar-right">
+						<i class="btn btn-default" style="float:left; margin: 5px;" onclick="clear_local_storage()">Clear Cart</i>
 						<div class="nav navbar-nav" style="padding-top: 5px; padding-bottom: 5px;">
+
 							<form action="/cart" method="POST">
 								<input id="orders_input" type="hidden" name="orders" style="" value="">
 							<input id="orders_button" type="submit" class="btn btn-primary" value="Cart (...)">

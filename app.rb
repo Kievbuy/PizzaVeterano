@@ -10,6 +10,9 @@ class Product < ActiveRecord::Base
 end
 
 class Order < ActiveRecord::Base
+  # validates :name, presence: true
+  # validates :phone, presence: true
+  # validates :address, presence: true
 end
 
 
@@ -20,6 +23,12 @@ end
 
 get '/about' do
   erb :about
+end
+
+get '/all_orders' do
+  @all_orders = Order.order('created_at DESC')
+
+  erb :all_orders
 end
 
 # ==== POST ====
@@ -33,6 +42,20 @@ post '/cart' do
   end
 
   erb :cart
+end
+
+post '/order' do
+  @o = Order.new params[:order]
+
+  if @o.save
+    erb "<h2>Thank you. Your order is folowing:</h2>"
+    erb :order
+  else
+    @error = @o.errors.full_messages.first
+    erb :cart
+  end
+
+  erb :order
 end
 
 
