@@ -1,3 +1,20 @@
 <h1>Your cart</h1>
 <br>
-<p>List of items will be gere!</p>
+<p>Your order:</p>
+
+<table class="table table-bordered table-striped">
+    <tr>
+      <th>Product</th>
+      <th>Number of items</th>
+    </tr>
+  <% @orders.each do |x| %>
+     <tr>
+       <th>id<%= x[0] %></th>
+       <td><%= x[1] %></td>
+     </tr>
+  <% end %>
+  <tr>
+    <td colspan="2"><b>Total: <%= @orders.size %></b></td>
+    <!--<td></td>-->
+  </tr>
+</table>
