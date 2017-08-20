@@ -49,10 +49,8 @@ post '/order' do
 
   if @o.save
     erb "<h2>Thank you. Your order is folowing:</h2>"
-    erb :order
-  else
+      else
     @error = @o.errors.full_messages.first
-    erb :cart
   end
 
   erb :order
