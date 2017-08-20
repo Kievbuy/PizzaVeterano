@@ -2,6 +2,7 @@
 <br>
 <p>Your order:</p>
 
+<div id="cart">
 <table class="table table-bordered table-striped">
     <tr>
       <th>Product</th>
@@ -28,6 +29,8 @@
   </tr>
 </table>
 
+
+
 <br>
 
 <form action="/order" method="POST" role="form">
@@ -47,6 +50,7 @@
     <textarea name="order[address]" type="text" class="form-control" placeholder="Delivery address" value=""></textarea></div>
 
   <button type="submit" value="Confirm Your Order" class="btn btn-success">Place this order</button>
-  <span class="btn btn-success btn-danger" onclick="clear_local_storage()">Cancel</span>
+  <span class="btn btn-success btn-danger" onclick="clear_cart()">Cancel</span>
 
 </form>
+</div>  <!--cart-->

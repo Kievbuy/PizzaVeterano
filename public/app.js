@@ -64,3 +64,8 @@ function clear_local_storage(){
     window.localStorage.clear();
     update_orders_button();
 }
+
+function clear_cart(){
+    clear_local_storage();
+    $('#cart').text('Your cart is empty!');
+}
