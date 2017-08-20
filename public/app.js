@@ -18,6 +18,10 @@ function update_orders_button(){
     $("#orders_button").val(text);
 }
 
+// function test_unit(){
+//     alert('Working!!!');
+// }
+
 function add_to_cart(id)
 {
     var key = 'product_' + id;
@@ -38,7 +42,7 @@ function totalcart() {
         var loc = localStorage[i];
         total = total + loc * 1;
     }
-    alert(total);
+    return total;
 }
 
 function get_orders() {
